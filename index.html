@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arduino EasyScript (AES) - English to Arduino</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">AES</div>
+      <div class="title">
+        <div class="name">Arduino EasyScript</div>
+        <div class="tag">English-like code → Arduino C++ (no extra libraries)</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <select id="exampleSelect" class="select" title="Examples"></select>
+      <button id="loadExample" class="btn">Load</button>
+
+      <span class="sep"></span>
+
+      <button id="formatBtn" class="btn" title="Format (Shift+Alt+F)">Format</button>
+      <button id="copyBtn" class="btn">Copy C++</button>
+      <button id="downloadBtn" class="btn primary">Download .ino</button>
+      <button id="themeBtn" class="btn" title="Toggle theme">Theme</button>
+      <a class="btn ghost" href="./docs/Arduino_EasyScript_Docs.pdf" target="_blank" rel="noopener">Docs PDF</a>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="panel">
+      <div class="panelHeader">
+        <div class="panelTitle">EasyScript</div>
+        <div class="panelMeta" id="statusLeft">Ready.</div>
+      </div>
+      <div id="editor" class="editor"></div>
+      <div class="hint">
+        Tip: type <code>setup:</code> then press Enter — it will auto-insert <code>end</code>.
+        Use <code>#</code> or <code>//</code> for comments.
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <div class="panelTitle">Arduino C++ preview</div>
+        <div class="panelMeta" id="statusRight"></div>
+      </div>
+      <div id="outEditor" class="editor"></div>
+      <div id="problems" class="problems" aria-label="Problems list"></div>
+    </section>
+  </main>
+
+  <!-- Monaco uses AMD loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+  <!-- Language + compiler -->
+  <script src="./src/aes/service.js"></script>
+  <script src="./src/examples.js"></script>
+  <script src="./src/monacoAes.js"></script>
+  <script src="./src/main.js"></script>
+</body>
+</html>
