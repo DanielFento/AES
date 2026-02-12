@@ -1,4 +1,4 @@
-# Arduino EasyScript (AES) — Rebuild
+# Arduino EasyScript (AES) Remade
 
 A tiny English-like language that transpiles to Arduino C++ **without** external libraries.
 This repo is intentionally minimal and hackable: open it, read it, extend it.
