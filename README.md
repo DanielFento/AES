@@ -60,6 +60,3 @@ loop:
 end
 ```
 
-## License
-
-Do whatever you want with it.
